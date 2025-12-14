@@ -7,16 +7,15 @@ function Header(){
         <header>
             <div className="w-full flex items-center justify-between p-2">
                 <div>
-                    <Image src="/logo-nobg.png" alt="company logo" width={150} height={100} className="ml-32"/>
+                    <Image src="/logo-nobg.png" alt="company logo" width={300} height={200} className="ml-32"/>
                 </div>
                 <div className="flex space-x-40 mr-16">
-                    <button className="px-4 py-2 bg-[#2174A0] text-[rgb(219,219,219)]">Home</button>
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">About</button>
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">Services</button>
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">Contact</button>
+                    <button className="px-4 py-2 bg-blue-500 text-white text-2xl rounded-xl hover:cursor-pointer">Home</button>
+                    <button className="px-4 py-2 bg-blue-500 text-white text-2xl rounded-xl hover:cursor-pointer">About</button>
+                    <button className="px-4 py-2 bg-blue-500 text-white text-2xl rounded-xl hover:cursor-pointer">Services</button>
+                    <button className="px-4 py-2 bg-blue-500 text-white text-2xl rounded-xl hover:cursor-pointer">Contact</button>
                 </div>
             </div>
-            <div className="bg-[#2174A0] h-1 w-full mt-1"></div>
         </header>
     )
 }
