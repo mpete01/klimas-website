@@ -43,10 +43,10 @@ function BodyComponent(){
                 </div>
                 <div className="flex-1 flex justify-center lg:justify-end">
                 <Image
-                    src="/imgs/pic_8.jpg"
+                    src="/imgs/pic_16.jpg"
                     alt="AC installation"
                     width={1200}
-                    height={1000}
+                    height={1080}
                     className="w-full max-w-lg rounded-2xl shadow-lg"/>
                 </div>
             </div>
@@ -147,7 +147,7 @@ function BodyComponent(){
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     <div className="flex-1">
                         <Image
-                        src="/imgs/pic_7.jpg"
+                        src="/imgs/pic_14.jpg"
                         alt="Comfortable living room"
                         className="rounded-3xl shadow-lg w-full max-w-md mx-auto lg:mx-0"
                         width={1080}
