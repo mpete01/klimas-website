@@ -1,6 +1,8 @@
 'use client'
 import Image from "next/image"
 import { useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../lib/font-awesome';
 
 function BodyComponent(){
     const [name, setName] = useState('')
@@ -58,9 +60,7 @@ function BodyComponent(){
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M14 14.76V3a2 2 0 10-4 0v11.76a4 4 0 104 0z"/>
-                            </svg>
+                            <FontAwesomeIcon icon="wind" size="xl"/>
                         </div>
                         <h3 className="text-black text-lg font-semibold mb-3">Klíma installáció</h3>
                         <p className="text-gray-600 text-sm mb-6">
@@ -80,9 +80,7 @@ function BodyComponent(){
                     </div>
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M21 2l-2 2m-2 2l-4 4m-2 2l-8 8 2 2 8-8m2-2l4-4m2-2l2-2"/>
-                            </svg>
+                            <FontAwesomeIcon icon="wrench" size="xl"/>
                         </div>
                         <h3 className="text-black text-lg font-semibold mb-3">Klíma javítás</h3>
                         <p className="text-gray-600 text-sm mb-6">
@@ -103,9 +101,7 @@ function BodyComponent(){
                     </div>
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
-                            <svg className=" size-5 fill-current stroke-width-2 stroke-currentColor ">
-                                <path d="M4 4v6h6M20 20v-6h-6M5 19a9 9 0 0114-7M19 5a9 9 0 01-14 7"/>
-                            </svg>
+                            <FontAwesomeIcon icon="toolbox" size="xl"/>
                         </div>
                         <h3 className="text-black text-lg font-semibold mb-3">Karbantartás</h3>
                         <p className="text-gray-600 text-sm mb-6">
@@ -125,9 +121,7 @@ function BodyComponent(){
                     </div>
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                     <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/>
-                    </svg>
+                    <FontAwesomeIcon icon="shield" size="xl"/>
                     </div>
                     <h3 className="text-black text-lg font-semibold mb-3">24/7 Ügyelet</h3>
                     <p className="text-gray-600 text-sm mb-6">
@@ -169,9 +163,7 @@ function BodyComponent(){
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4">
                                 <div className="shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M9 12l2 2 4-4M12 22a10 10 0 110-20 10 10 0 010 20z"/>
-                                    </svg>
+                                    <FontAwesomeIcon icon="circle-check" size="xl"/>
                                     </div>
                                     <div>
                                     <h3 className="text-black font-semibold">Magasan képzett szakemberek</h3>
@@ -182,10 +174,7 @@ function BodyComponent(){
                             </li>
                             <li className="flex items-start gap-4">
                                 <div className="shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path d="M12 6v6l4 2"/>
-                                    </svg>
+                                    <FontAwesomeIcon icon="clock" size="xl"/>
                                     </div>
                                     <div>
                                     <h3 className="text-black font-semibold">Gyors kiszállási idő</h3>
@@ -196,9 +185,7 @@ function BodyComponent(){
                             </li>
                             <li className="flex items-start gap-4">
                                 <div className="shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M12 1v22M17 5H9a4 4 0 000 8h6a4 4 0 010 8H7"/>
-                                    </svg>
+                                    <FontAwesomeIcon icon="sack-dollar" size="xl"/>
                                     </div>
                                     <div>
                                     <h3 className="text-black font-semibold">Átlátható árazás</h3>
@@ -210,9 +197,7 @@ function BodyComponent(){
                             </li>
                             <li className="flex items-start gap-4">
                                 <div className="shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z"/>
-                                    </svg>
+                                    <FontAwesomeIcon icon="people-group" size="xl"/>
                                     </div>
                                     <div>
                                     <h3 className="text-black font-semibold">Vevőközpontuság</h3>
@@ -232,31 +217,31 @@ function BodyComponent(){
                     <h2 class="text-4xl md:text-5xl font-bold text-black">Lépjen velünk kapcsolatba</h2>
                     <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Ott segítünk ahol tudunk.</p>
                     <div>
-                    <h3 class="font-semibold text-black">Telefonszám</h3>
-                    <a href="tel:+36201234567" class="text-gray-600">+36/20-123-4567</a>
+                        <h3 class="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
+                        <a href="tel:+36201234567" class="text-gray-600">+36/20-123-4567</a>
                     </div>
                     <div>
-                    <h3 class="font-semibold text-black">Email</h3>
-                    <p class="text-gray-700">info@coolcomfort.com</p>
+                        <h3 class="font-semibold text-black"><FontAwesomeIcon icon="envelope" size="xl" className="text-blue-500 mr-1"/>Email</h3>
+                        <a href="mailto:rekcomfort@gmail.com" class="text-gray-700">rekcomfort@gmail.com</a>
                     </div>
                     <div>
-                    <h3 class="font-semibold text-black">Address</h3>
-                    <p class="text-gray-700">123 Main Street<br/>Your City, ST 12345</p>
+                        <h3 class="font-semibold text-black"><FontAwesomeIcon icon="location-dot" size="xl" className="text-blue-500 mr-1"/>Cím</h3>
+                        <p class="text-gray-700">5000 Szolnok<br/>Kossuth tér 9</p>
                     </div>
                     <div>
-                    <h3 class="font-semibold text-gray-700">Hours</h3>
+                    <h3 class="font-semibold text-gray-700"><FontAwesomeIcon icon="clock" size="xl" className="text-blue-500 mr-1"/>Ügyfélfogadás</h3>
                     <p class="text-gray-700">
-                        Mon - Fri: 7:00 AM - 7:00 PM<br/>
-                        Sat - Sun: 8:00 AM - 5:00 PM<br/>
-                        Emergency: 24/7
+                        Hétköznap: 8:00 - 17:00<br/>
+                        Hétvége: 9:00 - 16:00<br/>
+                        Sürgős kiszállás: 24/7
                     </p>
                     </div>
                 </div>
                 <div class="space-y-6">
-                    <h2 class="text-2xl font-bold text-black">Request a Quote</h2>
+                    <h2 class="text-2xl font-bold text-black">Forduljon hozzánk egy konkrét hibával</h2>
                     <form class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-black">Name</label>
+                        <label class="block text-sm font-medium text-black">Név</label>
                         <input type="text" placeholder="Név" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" />
                     </div>
 
@@ -266,26 +251,26 @@ function BodyComponent(){
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-black">Phone</label>
+                        <label class="block text-sm font-medium text-black">Telefon</label>
                         <input type="tel" placeholder="+36201234567" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
                     </div>
 
                     <div>
-                        <label class="text-black block text-sm font-medium ">Service Needed</label>
+                        <label class="text-black block text-sm font-medium ">Igényelt szolgáltatás</label>
                         <select class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
-                            <option>AC Installation</option>
-                            <option>Heating Repair</option>
-                            <option>Maintenance</option>
-                            <option>Emergency Service</option>
+                            <option>Klíma Beszerelés</option>
+                            <option>Hűtő/fűtőtest Javítás</option>
+                            <option>Karbantartás</option>
+                            <option>Sürgős Kiszállás</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-black">Message</label>
-                        <textarea rows="4" placeholder="Tell us about your needs..." class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        <label class="block text-sm font-medium text-black">Üzenet</label>
+                        <textarea rows="4" placeholder="Írja le a problémáját..." class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                     </div>
 
-                    <button type="submit" class="text-xl w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition cursor-pointer">Send Message</button>
+                    <button type="submit" class="text-xl w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition cursor-pointer">Üzenet Küldése</button>
                     </form>
                 </div>
             </div>
