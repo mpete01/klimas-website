@@ -32,7 +32,7 @@ export async function POST(request) {
     })
 
     try {
-        await transporter.sendMail(message);
+        //await transporter.sendMail(message);
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
     } catch (error) {

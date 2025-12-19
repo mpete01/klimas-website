@@ -19,7 +19,7 @@ function BodyComponent(){
 
     const submitProblem = (e) => {
         e.preventDefault()
-        if(name == '' || (email == '' && phone == '')){
+        if(name.trim() == '' || (email.trim() == '' && phone.trim() == '')){
             return toast.error('Név és telefon vagy email nem lehet üres', {
                     position: "top-right",
                     autoClose: 3000,
