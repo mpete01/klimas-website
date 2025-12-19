@@ -2,6 +2,8 @@
 import Image from "next/image"
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../lib/font-awesome';
 
 function BodyComponent(){
@@ -9,22 +11,87 @@ function BodyComponent(){
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [serviceNeeded, setServiceNeeded] = useState('')
-    const [] = useState('')
+    const [issue, setIssue] = useState('')
+
+    const handleSelectServiceNeeded = (e) => {
+        setServiceNeeded(e.target.value)
+    }
+
+    const submitProblem = (e) => {
+        e.preventDefault()
+        if(name == '' || (email == '' && phone == '')){
+            return toast.error('Név és telefon vagy email nem lehet üres', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+        }
+        fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, phone, serviceNeeded, issue })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.message)
+            if(data.message == "Email sent successfully"){
+                toast.success('Email sikeresen elküldve', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                setTimeout(() => {
+                    setName('')
+                    setEmail('')
+                    setPhone('')
+                    setServiceNeeded('')
+                    setIssue('')
+                }, 1500)
+                
+            } else {
+                toast.error('Hiba az elküldésben. Kérem próbálja újra', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            }
+        })
+        .catch(err => console.error(err))
+        
+    }
 
     return <>
         <section className="bg-blue-700 text-white px-6 py-16">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
                 <div className="flex-1 max-w-xl">
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        Professzionális klíma szerelés és karbantartás
+                        Professzionális klíma- és villanyszerelés, valamint ezen eszközök karbantartása
                     </h1>
                     <p className="text-blue-100 text-lg mb-8">
-                        Professszionális hűtő- és fűtő klímák megoldásának kivitelezése othhonában vagy vállalkozásában.
+                        Professszionális hűtő- és fűtő klímák megoldásának kivitelezése és villanyszereléssel kapcsoaltos 
+                        szolgáltatások szállítása othhonába vagy vállalkozásába. <br/>
                         Gyors, megbízható és megfizetehető szolgáltatás amiben megbízhat.    
                     </p>
                     <div className="flex gap-4 flex-wrap">
-                        <button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-blue-100 transition">Foglaljon időpontot</button>
-                        <button className="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition">Hívjon most</button>
+                        {/*<button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-blue-100 transition">Foglaljon időpontot</button>*/}
+                        <a href="tel:+36203338912" className="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition">Hívjon most</a>
                     </div>
                     <div className="flex gap-10 mt-12">
                         <div>
@@ -51,7 +118,7 @@ function BodyComponent(){
                 </div>
             </div>
         </section>
-        <section className="bg-white py-20">
+        <section id="services" className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-black text-4xl md:text-5xl font-semibold mb-4">Szolgáltatásaink</h2>
@@ -82,9 +149,9 @@ function BodyComponent(){
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
                             <FontAwesomeIcon icon="wrench" size="xl"/>
                         </div>
-                        <h3 className="text-black text-lg font-semibold mb-3">Klíma javítás</h3>
+                        <h3 className="text-black text-lg font-semibold mb-3">Klíma javítás és karbantartás</h3>
                         <p className="text-gray-600 text-sm mb-6">
-                            Gyors és megbízható javítási szolgáltatások minden, a klíma rendszerrel kapcsoaltos hibára. 
+                            Gyors és megbízható javítási- és karbantartási szolgáltatások minden, a klíma rendszerrel kapcsoaltos hibára. 
                             Tapasztalt szakembereink gyorsan diagnosztizálnak és megjavítanak mindne felmerülő problémát
                         </p>
                         <ul className="space-y-3 text-sm">
@@ -97,25 +164,31 @@ function BodyComponent(){
                             <li className="flex items-center gap-2 text-gray-700">
                                 <span className="text-blue-600">✓</span>90 nap garnacia
                             </li>
-                        </ul>
-                    </div>
-                    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
-                            <FontAwesomeIcon icon="toolbox" size="xl"/>
-                        </div>
-                        <h3 className="text-black text-lg font-semibold mb-3">Karbantartás</h3>
-                        <p className="text-gray-600 text-sm mb-6">
-                            Rendszeres karbantartással hatékonyabbul fog működni a rendszer. Növelje a klímája élettartamát a megelőző karbantartási csomagunkkal.
-                        </p>
-                        <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-2 text-gray-700">
                                 <span className="text-blue-600">✓</span>Szezonális átnézés
                             </li>
                             <li className="flex items-center gap-2 text-gray-700">
                                 <span className="text-blue-600">✓</span>Klímatakarítás
                             </li>
+                        </ul>
+                    </div>
+                    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
+                            <FontAwesomeIcon icon="toolbox" size="xl"/>
+                        </div>
+                        <h3 className="text-black text-lg font-semibold mb-3">Villanszerelés</h3>
+                        <p className="text-gray-600 text-sm mb-6">
+                            Cégünk tapasztalt villanyszerelőkkel is rendelkezik akik mindenféle elektromos problémákat szakszerűen elhárítanak Önnek
+                        </p>
+                        <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-2 text-gray-700">
-                                <span className="text-blue-600">✓</span>Költséghatékony
+                                <span className="text-blue-600">✓</span>Vezeték behúzás és újrahűzás modernebbre
+                            </li>
+                            <li className="flex items-center gap-2 text-gray-700">
+                                <span className="text-blue-600">✓</span>Fi-relé és kismegszakító cseréje modern és szabványos technológiákra
+                            </li>
+                            <li className="flex items-center gap-2 text-gray-700">
+                                <span className="text-blue-600">✓</span>Lámpák, konnektorok kialakítása
                             </li>
                         </ul>
                     </div>
@@ -211,22 +284,18 @@ function BodyComponent(){
                 </div>
             </div>
         </section>
-        <section>
+        <section id="contact">
             <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
                 <div class="space-y-6">
                     <h2 class="text-4xl md:text-5xl font-bold text-black">Lépjen velünk kapcsolatba</h2>
                     <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Ott segítünk ahol tudunk.</p>
                     <div>
                         <h3 class="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
-                        <a href="tel:+36201234567" class="text-gray-600">+36/20-123-4567</a>
+                        <a href="tel:+36203338912" class="text-gray-600">+36/20-333-8912</a>
                     </div>
                     <div>
                         <h3 class="font-semibold text-black"><FontAwesomeIcon icon="envelope" size="xl" className="text-blue-500 mr-1"/>Email</h3>
                         <a href="mailto:rekcomfort@gmail.com" class="text-gray-700">rekcomfort@gmail.com</a>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-black"><FontAwesomeIcon icon="location-dot" size="xl" className="text-blue-500 mr-1"/>Cím</h3>
-                        <p class="text-gray-700">5000 Szolnok<br/>Kossuth tér 9</p>
                     </div>
                     <div>
                     <h3 class="font-semibold text-gray-700"><FontAwesomeIcon icon="clock" size="xl" className="text-blue-500 mr-1"/>Ügyfélfogadás</h3>
@@ -241,40 +310,49 @@ function BodyComponent(){
                     <h2 class="text-2xl font-bold text-black">Forduljon hozzánk egy konkrét hibával</h2>
                     <form class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-black">Név</label>
-                        <input type="text" placeholder="Név" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" />
+                        <label required class="block text-sm font-medium text-black">Név*</label>
+                        <input type="text" onChange={(e) => setName(e.target.value)} value={name}
+                            placeholder="Név" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" />
+                    </div>
+                    <div>
+                        <label required class="block text-sm font-medium text-black">Email*</label>
+                        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}
+                            placeholder="pelda01@gmail.com" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-black">Email</label>
-                        <input type="email" placeholder="pelda01@gmail.com" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-black">Telefon</label>
-                        <input type="tel" placeholder="+36201234567" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
+                        <label required class="block text-sm font-medium text-black">Telefon*</label>
+                        <input type="tel" placeholder="+36201234567" onChange={(e) => setPhone(e.target.value)} value={phone}
+                        class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
                     </div>
 
                     <div>
                         <label class="text-black block text-sm font-medium ">Igényelt szolgáltatás</label>
-                        <select class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
-                            <option>Klíma Beszerelés</option>
-                            <option>Hűtő/fűtőtest Javítás</option>
-                            <option>Karbantartás</option>
-                            <option>Sürgős Kiszállás</option>
+                        <select required value={serviceNeeded} onChange={handleSelectServiceNeeded}
+                            class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">válasszon a listából</option>
+                            <option value="Klíma szereles">Klíma Beszerelés</option>
+                            <option value="Hűtő/fűtőtest javítás">Hűtő/fűtőtest Javítás</option>
+                            <option value="Karbantartás">Karbantartás</option>
+                            <option value="Villanyvezeték probléma">Villanyvezeték probléma</option>
+                            <option value="Biztosíték szerelés">Biztosíték szerelés</option>
+                            <option value="Egyéb villanyszereléssel kapcsoaltos probléma">Egyéb vilanyszereléssel kapcsoaltos probléma</option>
+                            <option value="Sürgős kiszállás">Sürgős Kiszállás</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-black">Üzenet</label>
-                        <textarea rows="4" placeholder="Írja le a problémáját..." class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        <label class="block text-sm font-medium text-black">Üzenet*</label>
+                        <textarea required rows="4" onChange={(e) => setIssue(e.target.value)} value={issue}
+                        placeholder="Írja le részletesebben a problémáját..." class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                     </div>
 
-                    <button type="submit" class="text-xl w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition cursor-pointer">Üzenet Küldése</button>
+                    <button type="submit" onClick={submitProblem} class="text-xl w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition cursor-pointer">Üzenet Küldése</button>
                     </form>
                 </div>
             </div>
         </section>
+        <ToastContainer />
     </>
 
 }
