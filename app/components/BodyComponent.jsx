@@ -131,7 +131,7 @@ function BodyComponent(){
                         </div>
                         <h3 className="text-black text-lg font-semibold mb-3">Klíma beszerelés</h3>
                         <p className="text-gray-600 text-sm mb-6">
-                            Az összes klímamárka Professzionális beszerelése. Felmérjük a helységet és a legoptimálisabb helyre szereljük be a maximum hatékonyság és komfort eléréséhez
+                            Az összes klímamárka professzionális beszerelése. Felmérjük a helyiséget és a legoptimálisabb helyre szereljük be a maximum hatékonyság és komfort eléréséhez
                         </p>
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-2 text-gray-700">
@@ -288,7 +288,7 @@ function BodyComponent(){
             <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
                 <div class="space-y-6">
                     <h2 class="text-4xl md:text-5xl font-bold text-black">Lépjen velünk kapcsolatba</h2>
-                    <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Keressen minket bizalommal</p>
+                    <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Keressen minket bizalommal!</p>
                     <div>
                         <h3 class="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
                         <a href="tel:+36203338912" class="text-gray-600">+36/20-333-8912</a>
