@@ -85,9 +85,9 @@ function BodyComponent(){
                         Professzionális klíma- és villanyszerelés, valamint ezen eszközök karbantartása
                     </h1>
                     <p className="text-blue-100 text-lg mb-8">
-                        Professszionális hűtő- és fűtő klímák megoldásának kivitelezése és villanyszereléssel kapcsoaltos 
-                        szolgáltatások szállítása othhonába vagy vállalkozásába. <br/>
-                        Gyors, megbízható és megfizetehető szolgáltatás amiben megbízhat.    
+                        Professszionális hűtő- és fűtő klímák megoldásának kivitelezése és villanyszereléssel kapcsolatos 
+                        szolgáltatások szállítása otthonába vagy vállalkozásába. <br/>
+                        Gyors, megbízható és megfizethető szolgáltatás amiben megbízhat.    
                     </p>
                     <div className="flex gap-4 flex-wrap">
                         {/*<button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-blue-100 transition">Foglaljon időpontot</button>*/}
@@ -100,7 +100,7 @@ function BodyComponent(){
                         </div>
                         <div>
                             <p className="text-3xl font-bold">1000+</p>
-                            <p className="text-blue-200 text-sm">Elégedett ügyfelek</p>
+                            <p className="text-blue-200 text-sm">Elégedett Ügyfelek</p>
                         </div>
                         <div>
                             <p className="text-3xl font-bold">24/7</p>
@@ -129,9 +129,9 @@ function BodyComponent(){
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
                             <FontAwesomeIcon icon="wind" size="xl"/>
                         </div>
-                        <h3 className="text-black text-lg font-semibold mb-3">Klíma installáció</h3>
+                        <h3 className="text-black text-lg font-semibold mb-3">Klíma beszerelés</h3>
                         <p className="text-gray-600 text-sm mb-6">
-                            Professzionális beszerelése az összes klíma márkának. Felmérjük a helységet és a legoptimálisabb helyre szereljük be a maximum hatékonyság és komfort eléréséhez
+                            Az összes klímamárka Professzionális beszerelése. Felmérjük a helységet és a legoptimálisabb helyre szereljük be a maximum hatékonyság és komfort eléréséhez
                         </p>
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-2 text-gray-700">
@@ -151,8 +151,8 @@ function BodyComponent(){
                         </div>
                         <h3 className="text-black text-lg font-semibold mb-3">Klíma javítás és karbantartás</h3>
                         <p className="text-gray-600 text-sm mb-6">
-                            Gyors és megbízható javítási- és karbantartási szolgáltatások minden, a klíma rendszerrel kapcsoaltos hibára. 
-                            Tapasztalt szakembereink gyorsan diagnosztizálnak és megjavítanak mindne felmerülő problémát
+                            Gyors és megbízható javítási- és karbantartási szolgáltatások minden, a klíma rendszerrel kapcsolatos hibára. 
+                            Tapasztalt szakembereink gyorsan diagnosztizálnak és megjavítanak minden felmerülő problémát
                         </p>
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-2 text-gray-700">
@@ -176,13 +176,13 @@ function BodyComponent(){
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-6">
                             <FontAwesomeIcon icon="toolbox" size="xl"/>
                         </div>
-                        <h3 className="text-black text-lg font-semibold mb-3">Villanszerelés</h3>
+                        <h3 className="text-black text-lg font-semibold mb-3">Villanyszerelés</h3>
                         <p className="text-gray-600 text-sm mb-6">
-                            Cégünk tapasztalt villanyszerelőkkel is rendelkezik akik mindenféle elektromos problémákat szakszerűen elhárítanak Önnek
+                            Cégünk tapasztalt villanyszerelőkkel rendelkezik, akikhez elektromos problémákkal is bizalommal fordulhat
                         </p>
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-2 text-gray-700">
-                                <span className="text-blue-600">✓</span>Vezeték behúzás és újrahűzás modernebbre
+                                <span className="text-blue-600">✓</span>Vezeték behúzás és újrahúzás modernebbre
                             </li>
                             <li className="flex items-center gap-2 text-gray-700">
                                 <span className="text-blue-600">✓</span>Fi-relé és kismegszakító cseréje modern és szabványos technológiákra
@@ -231,7 +231,7 @@ function BodyComponent(){
                         <h2 className="text-black text-3xl font-semibold mb-4">Miért válasszon minket</h2>
                         <p className="text-gray-600 mb-8">
                             Elkötelezettek vagyunk amellett, hogy kimagasló légkondicionáló rendszerekkel kapcsolatos 
-                            szolgáltatást nyújtsunk baráti áron, egést évben, hogy Önnek egész évben kényelmes legyen az otthona.
+                            szolgáltatást nyújtsunk baráti áron, hogy Önnek egész évben kényelmes legyen az otthona.
                         </p>
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4">
@@ -273,7 +273,7 @@ function BodyComponent(){
                                     <FontAwesomeIcon icon="people-group" size="xl"/>
                                     </div>
                                     <div>
-                                    <h3 className="text-black font-semibold">Vevőközpontuság</h3>
+                                    <h3 className="text-black font-semibold">Vevőközpontúság</h3>
                                     <p className="text-gray-600 text-sm">
                                         Nekünk az Ön elégedettsége az első, így csak magas színvonalú szolgáltatást és munkát adunk ki a kezünk közül
                                     </p>
@@ -288,7 +288,7 @@ function BodyComponent(){
             <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
                 <div class="space-y-6">
                     <h2 class="text-4xl md:text-5xl font-bold text-black">Lépjen velünk kapcsolatba</h2>
-                    <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Ott segítünk ahol tudunk.</p>
+                    <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Keressen minket bizalommal</p>
                     <div>
                         <h3 class="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
                         <a href="tel:+36203338912" class="text-gray-600">+36/20-333-8912</a>
@@ -336,7 +336,7 @@ function BodyComponent(){
                             <option value="Karbantartás">Karbantartás</option>
                             <option value="Villanyvezeték probléma">Villanyvezeték probléma</option>
                             <option value="Biztosíték szerelés">Biztosíték szerelés</option>
-                            <option value="Egyéb villanyszereléssel kapcsoaltos probléma">Egyéb vilanyszereléssel kapcsoaltos probléma</option>
+                            <option value="Egyéb villanyszereléssel kapcsolatos probléma">Egyéb vilanyszereléssel kapcsolatos probléma</option>
                             <option value="Sürgős kiszállás">Sürgős Kiszállás</option>
                         </select>
                     </div>

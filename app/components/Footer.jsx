@@ -12,7 +12,7 @@ function Footer(){
           Rek Comfort Sytems
         </h2>
         <p class="text-sm leading-relaxed">
-          Szakszerű klímaberendezések beszerelése, karbantartása, valamint villanyszereléssel kapcsoaltos munkálatok magas 
+          Szakszerű klímaberendezések beszerelése, karbantartása, valamint villanyszereléssel kapcsolatos munkálatok magas 
           szintű szolgáltatásának szállítása otthonokba és irodákba egyaránt
         </p>
       </div>
