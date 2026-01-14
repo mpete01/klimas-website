@@ -1,50 +1,88 @@
-function Footer(){
+import Link from "next/link";
 
-    return (
-        <footer class="bg-linear-to-b from-slate-900 to-slate-950 text-slate-300">
-  <div class="max-w-7xl mx-auto px-6 py-14">
+function Footer() {
+  return (
+    <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300">
+      <div className="max-w-7xl mx-auto px-6 py-14">
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-      
+          {/* Company Info */}
+          <div>
+            <h2 className="text-white text-xl font-semibold mb-4">
+              Rek Comfort Systems
+            </h2>
+            <p className="text-sm leading-relaxed">
+              Szakszerű klímaberendezések beszerelése, karbantartása, valamint villanyszereléssel kapcsolatos munkálatok magas 
+              szintű szolgáltatásának szállítása otthonokba és irodákba egyaránt.
+            </p>
+          </div>
 
-      <div>
-        <h2 class="text-white text-xl font-semibold mb-4">
-          Rek Comfort Sytems
-        </h2>
-        <p class="text-sm leading-relaxed">
-          Szakszerű klímaberendezések beszerelése, karbantartása, valamint villanyszereléssel kapcsolatos munkálatok magas 
-          szintű szolgáltatásának szállítása otthonokba és irodákba egyaránt
-        </p>
+          {/* Services Links */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Szolgáltatások</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="#services" className="hover:text-white">
+                  Klíma Beszerelés
+                </Link>
+              </li>
+              <li>
+                <Link href="#services" className="hover:text-white">
+                  Hűtő/fűtőtest Javítás
+                </Link>
+              </li>
+              <li>
+                <Link href="#services" className="hover:text-white">
+                  Karbantartás
+                </Link>
+              </li>
+              <li>
+                <Link href="#services" className="hover:text-white">
+                  Sürgős Kiszállás
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Cég</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="#" className="hover:text-white">
+                  Rólunk
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" className="hover:text-white">
+                  Elérhetőségek
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info (New SEO-friendly addition) */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Kapcsolat</h3>
+            <p className="text-sm">
+              Telefon: <a href="tel:+36203338912" className="hover:text-white">+36/20-333-8912</a>
+            </p>
+            <p className="text-sm">
+              Email: <a href="mailto:rekcomfort@gmail.com" className="hover:text-white">rekcomfort@gmail.com</a>
+            </p>
+            <p className="text-sm">Budapest, Hungary</p>
+          </div>
+
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-slate-800 mt-12 pt-6 text-center text-sm text-slate-400">
+          © {new Date().getFullYear()} Rek Comfort Systems. Minden jog fenntartva.
+        </div>
       </div>
-
-
-      <div>
-        <h3 class="text-white font-semibold mb-4">Szolgáltatások</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#services" class="hover:text-white">Klíma Beszerelés</a></li>
-          <li><a href="#services" class="hover:text-white">Hűtő/fűtőtest Javítás</a></li>
-          <li><a href="#services" class="hover:text-white">Karbantartás</a></li>
-          <li><a href="#services" class="hover:text-white">Sürgős Kiszállás</a></li>
-        </ul>
-      </div>
-
-
-      <div>
-        <h3 class="text-white font-semibold mb-4">Cég</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-white">Rólunk</a></li>
-          <li><a href="#contact" class="hover:text-white">Elérhetőségek</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="border-t border-slate-800 mt-12 pt-6 text-center text-sm text-slate-400">
-      © 2025 Rek Comfort Systems. Minden jog fenntartva.
-    </div>
-  </div>
-</footer>
-
-    )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
