@@ -1,24 +1,45 @@
-//font - #2174A0
 import Image from "next/image";
+import Link from "next/link";
 
-function Header(){
+function Header() {
+  return (
+    <header className="bg-white shadow-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+        {/* Logo linking to home */}
+        <div className="flex-shrink-0">
+          <Link href="/" aria-label="Rek Comfort Systems home">
+            <Image
+              src="/logo-nobg.png"
+              alt="Rek Comfort Systems Logo"
+              width={300}
+              height={100}
+              className="h-auto max-w-full"
+              priority
+            />
+          </Link>
+        </div>
 
-    return(
-        <header>
-            <div className="w-full flex items-center justify-between p-2">
-                <div>
-                    <Image src="/logo-nobg.png" alt="company logo" width={150} height={100} className="ml-32"/>
-                </div>
-                <div className="flex space-x-40 mr-16">
-                    <button className="px-4 py-2 bg-[#2174A0] text-[rgb(219,219,219)]">Home</button>
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">About</button>
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">Services</button>
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">Contact</button>
-                </div>
-            </div>
-            <div className="bg-[#2174A0] h-1 w-full mt-1"></div>
-        </header>
-    )
+        <nav aria-label="Fő navigáció" className="hidden md:flex gap-6 font-medium text-gray-700">
+          <Link href="#services" className="hover:text-[#2174A0] transition">
+            Szolgáltatások
+          </Link>
+          <Link href="#contact" className="hover:text-[#2174A0] transition">
+            Kapcsolat
+          </Link>
+        </nav>
+
+        {/* call to action button */}
+        <div className="hidden md:block">
+          <a
+            href="tel:+36203338912"
+            className="bg-[#2174A0] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+          >
+            Hívjon most
+          </a>
+        </div>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
