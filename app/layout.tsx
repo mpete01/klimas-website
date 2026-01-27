@@ -14,7 +14,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rek Comfort System",
-  description: "Rek Comfort System. Megbízható klíma és villanyszerelői szolgáltatás",
+  description: "Klíma szerelés és villanyszerelés",
+  keywords: ["klíma", "villany", "szerelés"],
+  openGraph: {
+    title: "Rek Comfort System",
+    description: "Klíma szerelés és villanyszerelés",
+    url: "https://yourdomain.com",
+    siteName: "Product Name",
+    images: ["/og-image.png"],
+    type: "website",
+  }
 };
 
 export default function RootLayout({

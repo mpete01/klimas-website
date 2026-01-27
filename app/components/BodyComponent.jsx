@@ -285,51 +285,51 @@ function BodyComponent(){
             </div>
         </section>
         <section id="contact">
-            <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
-                <div class="space-y-6">
-                    <h2 class="text-4xl md:text-5xl font-bold text-black">Lépjen velünk kapcsolatba</h2>
-                    <p class="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Keressen minket bizalommal!</p>
+            <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
+                <div className="space-y-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-black">Lépjen velünk kapcsolatba</h2>
+                    <p className="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Keressen minket bizalommal!</p>
                     <div>
-                        <h3 class="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
-                        <a href="tel:+36203338912" class="text-gray-600">+36/20-333-8912</a>
+                        <h3 className="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
+                        <a href="tel:+36203338912" className="text-gray-600">+36/20-333-8912</a>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-black"><FontAwesomeIcon icon="envelope" size="xl" className="text-blue-500 mr-1"/>Email</h3>
-                        <a href="mailto:rekcomfort@gmail.com" class="text-gray-700">rekcomfort@gmail.com</a>
+                        <h3 className="font-semibold text-black"><FontAwesomeIcon icon="envelope" size="xl" className="text-blue-500 mr-1"/>Email</h3>
+                        <a href="mailto:rekcomfort@gmail.com" className="text-gray-700">rekcomfort@gmail.com</a>
                     </div>
                     <div>
-                    <h3 class="font-semibold text-gray-700"><FontAwesomeIcon icon="clock" size="xl" className="text-blue-500 mr-1"/>Ügyfélfogadás</h3>
-                    <p class="text-gray-700">
+                    <h3 className="font-semibold text-gray-700"><FontAwesomeIcon icon="clock" size="xl" className="text-blue-500 mr-1"/>Ügyfélfogadás</h3>
+                    <p className="text-gray-700">
                         Hétköznap: 8:00 - 17:00<br/>
                         Hétvége: 9:00 - 16:00<br/>
                         Sürgős kiszállás: 24/7
                     </p>
                     </div>
                 </div>
-                <div class="space-y-6">
-                    <h2 class="text-2xl font-bold text-black">Forduljon hozzánk egy konkrét hibával</h2>
-                    <form class="space-y-4">
+                <div className="space-y-6">
+                    <h2 className="text-2xl font-bold text-black">Forduljon hozzánk egy konkrét hibával</h2>
+                    <form className="space-y-4">
                     <div>
-                        <label required class="block text-sm font-medium text-black">Név*</label>
+                        <label required className="block text-sm font-medium text-black">Név*</label>
                         <input type="text" onChange={(e) => setName(e.target.value)} value={name}
-                            placeholder="Név" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" />
+                            placeholder="Név" className="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" />
                     </div>
                     <div>
-                        <label required class="block text-sm font-medium text-black">Email*</label>
+                        <label required className="block text-sm font-medium text-black">Email*</label>
                         <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}
-                            placeholder="pelda01@gmail.com" class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
+                            placeholder="pelda01@gmail.com" className="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
                     </div>
 
                     <div>
-                        <label required class="block text-sm font-medium text-black">Telefon*</label>
+                        <label required className="block text-sm font-medium text-black">Telefon*</label>
                         <input type="tel" placeholder="+36201234567" onChange={(e) => setPhone(e.target.value)} value={phone}
-                        class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
+                        className="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"/>
                     </div>
 
                     <div>
-                        <label class="text-black block text-sm font-medium ">Igényelt szolgáltatás</label>
+                        <label className="text-black block text-sm font-medium ">Igényelt szolgáltatás</label>
                         <select required value={serviceNeeded} onChange={handleSelectServiceNeeded}
-                            class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+                            className="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
                             <option value="">válasszon a listából</option>
                             <option value="Klíma szereles">Klíma Beszerelés</option>
                             <option value="Hűtő/fűtőtest javítás">Hűtő/fűtőtest Javítás</option>
@@ -342,12 +342,12 @@ function BodyComponent(){
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-black">Üzenet*</label>
+                        <label className="block text-sm font-medium text-black">Üzenet*</label>
                         <textarea required rows="4" onChange={(e) => setIssue(e.target.value)} value={issue}
-                        placeholder="Írja le részletesebben a problémáját..." class="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        placeholder="Írja le részletesebben a problémáját..." className="text-gray-700 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                     </div>
 
-                    <button type="submit" onClick={submitProblem} class="text-xl w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition cursor-pointer">Üzenet Küldése</button>
+                    <button type="submit" onClick={submitProblem} className="text-xl w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition cursor-pointer">Üzenet Küldése</button>
                     </form>
                 </div>
             </div>
