@@ -7,7 +7,7 @@ export async function POST(request) {
 
     const message = {
         from: process.env.GMAIL_USER, //email address that sends the email containing the information (should create a proxy email just for this)
-        to: 'petermolnar057@gmail.com', //company's email address, jelenleg teszt állapot miatt az enyém
+        to: 'rekadam11@gmail.com', //company's email address
         subject: `${name} - ${serviceNeeded}`,
         html: `
         <p>Ügyfél: ${name}</p>
