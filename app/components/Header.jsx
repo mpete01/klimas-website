@@ -31,7 +31,7 @@ function Header() {
         {/* call to action button */}
         <div className="hidden md:block">
           <a
-            href="tel:+36203338912"
+            href="tel:+36703926234"
             className="bg-[#2174A0] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
           >
             Hívjon most
