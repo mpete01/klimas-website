@@ -295,7 +295,7 @@ function BodyComponent(){
                     </div>
                     <div>
                         <h3 className="font-semibold text-black"><FontAwesomeIcon icon="envelope" size="xl" className="text-blue-500 mr-1"/>Email</h3>
-                        <a href="mailto:rekcomfort@gmail.com" className="text-gray-700">rekcomfort@gmail.com</a>
+                        <a href="mailto:rekadam11@gmail.com" className="text-gray-700">rekadam11@gmail.com</a>
                     </div>
                     <div>
                     <h3 className="font-semibold text-gray-700"><FontAwesomeIcon icon="clock" size="xl" className="text-blue-500 mr-1"/>Ügyfélfogadás</h3>
