@@ -7,13 +7,13 @@ export async function POST(request) {
 
     const message = {
         from: process.env.GMAIL_USER, //email address that sends the email containing the information (should create a proxy email just for this)
-        to: 'molnarpeti69@gmail.com', //company's email address
+        to: 'rekadam11@gmail.com', //company's email address
         subject: `${name} - ${serviceNeeded}`,
         html: `
-        <p>Ügyfél: ${name}</p>
-        <p>Telefonszám: ${phone}</p>
-        <p>Kért szolgáltatás: ${serviceNeeded}</p>
-        <p>Probléma részletesebb leírása:<br/>${issue}</p>
+        <p><b>Ügyfél:</b> ${name}</p>
+        <p><b>Telefonszám:</b> ${phone}</p>
+        <p><b>Kért szolgáltatás:</b> ${serviceNeeded}</p>
+        <p><b>Probléma részletesebb leírása:</b><br/>${issue}</p>
         `,
         headers: {
             "X-Entity-Ref-ID": "newmail"
@@ -32,7 +32,7 @@ export async function POST(request) {
     })
 
     try {
-        //await transporter.sendMail(message);
+        await transporter.sendMail(message);
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
     } catch (error) {
