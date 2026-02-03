@@ -91,7 +91,7 @@ function BodyComponent(){
                     </p>
                     <div className="flex gap-4 flex-wrap">
                         {/*<button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-blue-100 transition">Foglaljon időpontot</button>*/}
-                        <a href="tel:+36203338912" className="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition">Hívjon most</a>
+                        <a href="tel:+36703926234" className="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-700 transition">Hívjon most</a>
                     </div>
                     <div className="flex gap-10 mt-12">
                         <div>
@@ -291,7 +291,7 @@ function BodyComponent(){
                     <p className="text-gray-700 text-xl">Időpontot szeretne foglalni vagy kapcsolatba szeretne lépni velünk? Keressen minket bizalommal!</p>
                     <div>
                         <h3 className="font-semibold text-black"><FontAwesomeIcon icon="phone" size="xl" className="text-blue-500 mr-1"/>Telefonszám</h3>
-                        <a href="tel:+36203338912" className="text-gray-600">+36/20-333-8912</a>
+                        <a href="tel:+36703926234" className="text-gray-600">+36/70-392-6234</a>
                     </div>
                     <div>
                         <h3 className="font-semibold text-black"><FontAwesomeIcon icon="envelope" size="xl" className="text-blue-500 mr-1"/>Email</h3>
